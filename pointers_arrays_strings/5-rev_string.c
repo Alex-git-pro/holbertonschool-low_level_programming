@@ -9,19 +9,26 @@
 
 void rev_string(char *s)
 {
-	int i = 0;
-	int j = strlen(s) - 1;
+	int count = 0;
+	int i;
+	char j[450];
 
-	while (i < j)
+	while (s[count] != '\0')
 	{
-		char c = s[i];
-
-		s[i] = s[j];
-
-		s[j] = c;
-
-		i++;
-		j--;
+		count++;
 	}
+
+	for (i = 0; i < count; i++)
+	{
+		j[i] = s[count - 1 - i];
+	}
+
+	j[count] = '\0';
+
+	for (i =0; i <= count; i++)
+	{
+		s[i] = j[i];
+	}
+
 
 }
