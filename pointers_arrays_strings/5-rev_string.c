@@ -25,7 +25,8 @@ void rev_string(char *s)
 
 	j[count] = '\0';
 
-	for (i =0; i <= count; i++)
+	for (i = 0; i <= count; i++)
+
 	{
 		s[i] = j[i];
 	}
