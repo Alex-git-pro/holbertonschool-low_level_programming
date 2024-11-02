@@ -17,7 +17,7 @@ int _atoi(char *s)
 	while (*ptr != '\0')
 	{
 
-		if (*ptr >= 0 && *ptr <= 9)
+		if (*ptr >= '0' && *ptr <= '9')
 		{
 			result = result * 10 + (*ptr - '0');
 		}
