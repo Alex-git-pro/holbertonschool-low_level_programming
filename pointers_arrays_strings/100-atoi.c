@@ -19,12 +19,16 @@ int _atoi(char *s)
 
 		if (*ptr >= '0' && *ptr <= '9')
 		{
-			result = result * 10 + (*ptr - '1');
+			result = result * 10 + (*ptr - '0');
 		}
 
 		else if (*ptr == '-')
 		{
-			sign = sign * -1;
+			sign = -sign;
+		}
+		else if (*ptr == '+')
+		{
+
 		}
 		ptr++;
 	}
