@@ -13,6 +13,7 @@ int _atoi(char *s)
 	char *ptr = s;
 	int sign = 1;
 	int result = 0;
+	int starto = 0;
 
 	while (*ptr != '\0')
 	{
@@ -20,15 +21,26 @@ int _atoi(char *s)
 		if (*ptr >= '0' && *ptr <= '9')
 		{
 			result = result * 10 + (*ptr - '0');
+			starto = 1;
 		}
 
 		else if (*ptr == '-')
 		{
-			sign = -sign;
+			if (!starto)
+				{
+					sign = -sign;
+				}
 		}
 		else if (*ptr == '+')
 		{
-
+			if (!starto)
+			{
+				sign = sign;
+			}
+		}
+		else if (starto)
+		{
+			break;
 		}
 		ptr++;
 	}
