@@ -29,5 +29,5 @@ int _atoi(char *s)
 		ptr++;
 	}
 
-	return (0);
+	return (result);
 }
