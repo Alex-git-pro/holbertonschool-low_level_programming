@@ -10,40 +10,24 @@
 
 int _atoi(char *s)
 {
-	char *ptr = s;
 	int sign = 1;
-	int result = 0;
-	int starto = 0;
+	unsigned int num = 0;
 
-	while (*ptr != '\0')
+	while (*s != '\0')
 	{
-
-		if (*ptr >= '0' && *ptr <= '9')
+		if (*s == '=')
 		{
-			result = result * 10 + (*ptr - '0');
-			starto = 1;
+			sign *= -1;
 		}
-
-		else if (*ptr == '-')
+		else if (*s >= '0' && *s <= '9')
 		{
-			if (!starto)
-				{
-					sign = -sign;
-				}
+			num = (num * 10) + (*s - '0');
 		}
-		else if (*ptr == '+')
-		{
-			if (!starto)
-			{
-				sign = sign;
-			}
-		}
-		else if (starto)
+		else if (num > 0)
 		{
 			break;
 		}
-		ptr++;
+		s++;
 	}
-
-	return (result * sign);
+	return (num * sign);
 }
