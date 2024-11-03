@@ -18,7 +18,7 @@ char *cap_string(char *s)
 		{
 			if (capitalize_first && s[i] >= 'a' && s[i] <= 'z')
 			{
-				s[i] = s[i] - 32;
+				s[i] = s[i] -= 32;
 			}
 			capitalize_first = 0;
 		}
