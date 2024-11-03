@@ -10,19 +10,17 @@
 char *cap_string(char *s)
 {
 	int i = 0;
+	int capitalize_first = 1;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == ' ' ||
-			s[i] == '\t' ||
-			s[i] == '\n' ||
-			s[i] == ',' ||
-			s[i] == ';')
+		if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+			if (capitalize_first && s[i] >= 'a' && s[i] <= 'z')
 			{
-				s[i + 1] = s[i + 1] - 32;
+				s[i] = s[i] - 32;
 			}
+			capitalize_first = 0;
 		}
 		i++;
 	}
