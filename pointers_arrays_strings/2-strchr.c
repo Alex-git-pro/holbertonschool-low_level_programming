@@ -12,14 +12,20 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
+	/* Parcourt la chaîne jusqu'au caractère nul */
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		/* Compare le caractère courant avec c */
 		if (s[i] == c)
+		/* Retourne un pointeur vers le caractère trouvé */
 			return (s + i);
 	}
-
+	/**
+	 * Si c est le caractère nul,
+	*retourne un pointeur vers la fin de la chaîne
+	*/
 	if (c == '\0')
 	return (s + i);
-
+/* Retourne NULL si c n'est pas trouvé */
 	return (NULL);
 }
