@@ -25,6 +25,7 @@ char *_strchr(char *s, char c)
 	*retourne un pointeur vers la fin de la chaîne
 	*/
 	if (c == '\0')
+	/* Retourne l'adresse du caractère nul de fin de chaîne */
 	return (s + i);
 /* Retourne NULL si c n'est pas trouvé */
 	return (NULL);
