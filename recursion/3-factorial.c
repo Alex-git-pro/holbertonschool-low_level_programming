@@ -4,7 +4,7 @@
  * factorial - function that Calculates the factorial of a number
  * @n: The number to calculate the factorial of *
  *
- * Return: The length of the string
+ * Return: The factorial n, or -1
  */
 
 int factorial(int n)
