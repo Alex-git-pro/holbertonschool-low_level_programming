@@ -4,7 +4,12 @@
 #include <string.h>
 
 /**
- * 
+ * main - Entry point of the program
+ * @argc: The number of command-line arguments
+ * @argv: An array containing the command-line arguments
+ *
+ * Return: 0 on success, 98 for wrong number of arguments,
+ *         99 for invalid operator, or result of operation
  */
 
 
@@ -16,7 +21,7 @@ int main(int argc, char *argv[])
 	int (*opera)(int, int);
 
 
-	if (argc < 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -29,7 +34,7 @@ int main(int argc, char *argv[])
 
 	if (opera == NULL)
 	{
-		printf{"Error\n"};
+		printf("Error\n");
 		exit(99);
 	}
 
