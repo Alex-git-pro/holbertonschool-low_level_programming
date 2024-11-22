@@ -12,8 +12,8 @@ void print_all(const char * const format, ...)
 	unsigned int i, j;
 	char *k;
 	va_list vali;
-	i = 0;
 
+	i = 0;
 	while (format != NULL)
 	{
 		va_start(vali, format);
