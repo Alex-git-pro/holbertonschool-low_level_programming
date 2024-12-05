@@ -3,7 +3,7 @@
 
 /**
  * binary_to_uint - function that converts binary number to an uint
- * @b: Pointer to a string of 0 ans 1 chars
+ * @b: Pointer to a string of 0 and 1 char
  *
  * Return: the converted number, or 0 if there is more
  * chars in the string b that is not 0 or 1 or
